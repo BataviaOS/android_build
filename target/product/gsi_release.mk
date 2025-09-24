@@ -27,6 +27,9 @@
 #
 
 BUILDING_GSI := true
+ifneq ($(filter batavia_gsi_%,$(TARGET_PRODUCT)),)
+BUILDING_BATAVIA_GSI := true
+endif
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/etc/init/config \
